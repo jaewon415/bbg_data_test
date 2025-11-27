@@ -3,7 +3,7 @@ import streamlit as st
 import requests
 import pandas as pd
 
-API_URL = "http://10.210.32.235:8000/bdh"
+API_URL = "http://211.109.122.32:8000/bdh"
 
 st.title("블벅 데이터 조회")
 
@@ -22,3 +22,4 @@ if st.button("가지고 오기"):
     res = requests.get(API_URL, params=params)
     df = pd.DataFrame(res.json())
     st.dataframe(df)
+
